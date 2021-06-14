@@ -6,6 +6,7 @@ Lab 1:
 Sample of Post Request to make Order: 
 Post on https://localhost:5001/api/Orders
 With Body
+```json
 {
   "userId": 2,
   "items": [
@@ -26,8 +27,7 @@ With Body
     }
   ]
 }
-
-
+```
 
 Lab 2
 -----------------------------------------------------------------

@@ -31,5 +31,16 @@ With Body
 
 Lab 2
 -----------------------------------------------------------------
-run the Angularclient with ng serve -o
+1. run all APIs (gRPCAPI, InventoryService, and PaymentService)  
+2. run the Angularclient with ng serve -o at AngularClient/GRPCClient Directory
+
+
+
+
+
+
+
+
+
+
 

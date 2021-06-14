@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option csharp_namespace = "Payment.Proto";
+
+
+service PaymentService{
+	rpc DeduceBalance(PaymentMessage) returns (ServiceResult);
+}
+
+message PaymentMessage{
+	int32 userId = 1;
+	double totalPrice = 2;
+}
+
+message ServiceResult
+{
+	ServiceStatus status = 1;
+}
+
+
+enum ServiceStatus{
+	SUCESS = 0;
+	FAIL = 1;
+}

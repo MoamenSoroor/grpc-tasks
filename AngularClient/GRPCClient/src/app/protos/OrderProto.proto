@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPCAPI.ProtosAPI";
+
+
+service OrderProtoService{
+	rpc PostOrder(OrderMessage) returns (OrderResult);
+}
+
+message OrderMessage{
+	int32 userId = 1;
+	repeated Item items = 2;
+}
+
+message Item{
+	int32 id = 1;
+	int32 quantity = 2;
+	double price = 3;
+}
+
+
+message OrderResult
+{
+	OrderStatus Result = 1;
+}
+
+enum OrderStatus{
+	SUCCESS=0;
+	FAILED=1;
+}

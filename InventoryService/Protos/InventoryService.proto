@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option csharp_namespace = "Inventory.Proto";
+
+
+service InventoryService{
+	rpc DeduceInventory(InventoryMessage) returns (ServiceResult);
+
+}
+
+message InventoryMessage
+{
+	repeated Item items = 1;
+}
+
+message Item
+{
+	int32 Id = 1;
+	double price = 2;
+	int32 quantity = 3;
+}
+
+message ServiceResult
+{
+	ServiceStatus status = 1;
+}
+
+
+enum ServiceStatus{
+	SUCESS = 0;
+	FAIL = 1;
+}

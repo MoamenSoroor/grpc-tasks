@@ -1,2 +1,2 @@
 # grpc-tasks
-this repo. has task of gRPC Course.
+this repo. has tasks of gRPC Course.
